@@ -1,0 +1,28 @@
+#include <iostream>
+#include<fstream>
+
+using namespace std;
+class Lector{
+	public:
+	Lector(){
+		
+	}
+	void leer(){
+		ifstream fichero;
+		
+		fichero.open("lector.txt");
+		
+		while(!(fichero.eof())){
+			cout<<(char)fichero.get();
+		}
+		fichero.close();
+	}
+};
+
+int main(){
+	Lector l1;
+	cout<<"\nESTE ES EL CODIGO FUENTE DE ESTE PROGRAMA"<<endl;
+	l1.leer();
+	
+	return 0;
+}
